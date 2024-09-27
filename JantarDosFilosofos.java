@@ -5,7 +5,7 @@ public class JantarDosFilosofos {
 
         long startTime = System.nanoTime();
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
             for (int filosofo = 0; filosofo < NUM_FILOSOFOS; filosofo++) {
                 System.out.println("Filósofo " + filosofo + " está pensando.");
 
