@@ -1,4 +1,4 @@
-public class JantarDosFilosofos {
+public class JantarDosFilósofos {
     public static void main(String[] args) {
         final int NUM_FILOSOFOS = 5;
         boolean[] garfos = new boolean[NUM_FILOSOFOS];
@@ -33,6 +33,12 @@ public class JantarDosFilosofos {
 
         long endTime = System.nanoTime();
         double durationInSeconds = (endTime - startTime) / 1_000_000_000.0;
-        System.out.println("Tempo total de execução: " + durationInSeconds + " segundos");
+        
+        if (durationInSeconds > 60) {
+            double durationInMinutes = durationInSeconds / 60.0;
+            System.out.println("Tempo total de execução: " + durationInMinutes + " minutos");
+        } else {
+            System.out.println("Tempo total de execução: " + durationInSeconds + " segundos");
+        }
     }
 }
