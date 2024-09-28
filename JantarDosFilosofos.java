@@ -5,7 +5,7 @@ public class JantarDosFilosofos {
 
         long startTime = System.nanoTime();
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 1; i <= 100; i++) {
             for (int filosofo = 0; filosofo < NUM_FILOSOFOS; filosofo++) {
                 System.out.println("Filósofo " + filosofo + " está pensando.");
 
@@ -17,6 +17,12 @@ public class JantarDosFilosofos {
                     garfos[garfoDireito] = true;
 
                     System.out.println("Filósofo " + filosofo + " está comendo.");
+
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
 
                     garfos[garfoEsquerdo] = false;
                     garfos[garfoDireito] = false;
